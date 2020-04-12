@@ -51,7 +51,7 @@ public class Webapp {
 
         // Log all requests and responses
         afterAfter(new LoggingFilter());
-
+ 
         get("/", (request, response) -> {
             return welcome();
         });
