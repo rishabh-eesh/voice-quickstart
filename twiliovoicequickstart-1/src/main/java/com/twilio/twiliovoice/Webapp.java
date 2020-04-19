@@ -27,6 +27,7 @@ import org.apache.http.NameValuePair;
 import org.apache.http.client.utils.URLEncodedUtils;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 
 import java.nio.charset.Charset;
 import java.util.HashMap;
@@ -35,7 +36,7 @@ import java.util.Map;
 import java.lang.Character;
 
 @SpringBootApplication
-public class Webapp {
+public class Webapp extends SpringBootServletInitializer {
 
     static final String IDENTITY = "alice";
     static final String CALLER_ID = "client:quick_start";
