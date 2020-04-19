@@ -27,6 +27,7 @@ import org.apache.http.NameValuePair;
 import org.apache.http.client.utils.URLEncodedUtils;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 
 import java.nio.charset.Charset;
@@ -42,6 +43,11 @@ public class Webapp extends SpringBootServletInitializer {
     static final String CALLER_ID = "client:quick_start";
     // Use a valid Twilio number by adding to your account via https://www.twilio.com/console/phone-numbers/verified
     static final String CALLER_NUMBER = "+919458892705";
+    
+    @Override
+    protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {
+    	return builder.sources(Webapp.class);
+    }
  
     public static void main(String[] args) throws Exception {
     	
